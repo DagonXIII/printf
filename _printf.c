@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
-	  return (-1);
+		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 	for (p = format; *p; p++)
@@ -38,13 +38,13 @@ int _printf(const char *format, ...)
 				p++;
 			pfunc = print_selector(*p);
 			count += (pfunc)
-				? pfunc(args, &flags)
-				: _printf("%%%c", *p);
-		} else
+									 ? pfunc(args, &flags)
+									 : _printf("%%%c", *p);
+		}
+		else
 			count += _putchar(*p);
 	}
 	_putchar(-1);
 	va_end(args);
 	return (count);
-
 }
