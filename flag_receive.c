@@ -26,10 +26,6 @@ int flag_receive(char s, flags_t *f)
 			f->hash = 1;
 			i = 1;
 			break;
-		case '0':
-			f->zero = 1;
-			i = 1;
-			break;
 	}
 
 	return (i);
