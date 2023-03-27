@@ -73,4 +73,4 @@ int print_address(va_list l, flags_enabled *f);
 /* print_percent */
 int print_percent(va_list l, flags_enabled *f);
 
-#endif
+#endif /* !MAIN_H */
