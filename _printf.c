@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	register int count = 0;
 
-	va_start(argumentss, format);
+	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
