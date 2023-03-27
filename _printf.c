@@ -21,13 +21,9 @@ int _printf(const char *format, ...)
 
 	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
-	{
 		return (-1);
-	}
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
-	{
 		return (-1);
-	}
 	for (p = format; *p; p++)
 	{
 		if (*p == '%')
@@ -39,19 +35,14 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			while (flag_receive(*p, &flags))
-			{
 				p++;
-			}
-
 			pfunc = print_selector(*p);
 			count += (pfunc)
 									 ? pfunc(arguments, &flags)
 									 : _printf("%%%c", *p);
 		}
 		else
-		{
 			count += _putchar(*p);
-		}
 	}
 	_putchar(-1);
 	va_end(arguments);
