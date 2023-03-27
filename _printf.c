@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				count += _putchar('%');
 				continue;
 			}
-			while (get_flag(*p, &flags))
+			while (flag_receive(*p, &flags))
 				p++;
 			pfunc = print_selector(*p);
 			count += (pfunc)

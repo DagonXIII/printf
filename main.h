@@ -51,7 +51,7 @@ int _printf(const char *format, ...);
 /* print_selector */
 int (*print_selector(char s))(va_list, flags_t *);
 
-/* get_flag */
+/* flag_receive */
 int flag_receive(char s, flags_t *f);
 
 /* print_alpha */
