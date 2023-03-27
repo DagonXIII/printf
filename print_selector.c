@@ -10,7 +10,7 @@
  * printing function
  * Return: a pointer to the matching printing function
  */
-int (*print_selector(char s))(va_list, flags_enabled *)
+int (*print_selector(char s))(va_list, flags_t *)
 {
 	dm func_arr[] = {
 		{'i', print_int},

@@ -12,10 +12,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int (*pfunc)(va_list, flags_enabled *);
+	int (*pfunc)(va_list, flags_t *);
 	const char *p;
 	va_list args;
-	flags_enabled flags = {0, 0, 0};
+	flags_t flags = {0, 0, 0};
 
 	register int count = 0;
 
