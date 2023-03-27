@@ -27,7 +27,7 @@ typedef struct flags
 typedef struct decisionMaker
 {
 	char c;
-	int (*f)(va_list ap, flags_enabled *f);
+	int (*f)(va_list ap, flags_q *f);
 } dm;
 
 /* print_numners */
